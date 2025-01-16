@@ -4,7 +4,7 @@ import path from 'path';
 import { DataUploadService } from 'src/modules/data-upload/data-upload.service';
 import Queue from 'promise-queue';
 Queue.configure(Promise);
-const maxPendingPromises = 1; // 1 concurrent emails sent at once
+const maxPendingPromises = 1;
 const maxQueuedPromises = Infinity;
 const queue = new Queue(maxPendingPromises, maxQueuedPromises);
 
